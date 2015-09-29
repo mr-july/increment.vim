@@ -12,10 +12,14 @@
 " growing by 5 (100, 105, 110, ...)
 "=========================================================================
 
+if exists("loaded_increment")
+  finish
+endif
+let loaded_increment = 1
 
 let g:I=0
 
 function INC(increment)
-	let g:I =g:I + a:increment
-	return g:I
+  let g:I =g:I + a:increment
+  return g:I
 endfunction
